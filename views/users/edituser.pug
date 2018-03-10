@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  .main.container
+    h1 Editing #{firstName}'s profile
+    //- We add _method=PUT to the URL instead of a hidden input.
+    form(method='POST' action='/users/edituser?_method=PUT')
+     div.form-group
+     label(for='firstName') FirstName:
+      input#firstName.form-control(type='text', placeholder='first name' name='firstName')
+     div.form-group
+     label(for='email') Email:
+       input#email.form-control(type='email', placeholder='email' name='email')
+     div.form-group
+     label(for='jobTitle') Job Title:
+       input#jobTitle.form-control(type='text', placeholder='jobTitle' name='jobTitle')
+       button.btn.btn-primary(type='submit') Update Preferences

@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-8.col-md-offset-2
+        h1.display-4
+          img.avatar.img-circle.hidden-xs-down(src='/images/avatar.png', alt='avatar')
+        p Here you can buy a pass for the transport system
+        div
+            table(class="table bordered" style="text-align: center")
+                thread
+                    tr
+                        th(style="text-align:center") Length
+                        th(style="text-align:center") Price 
+                        th(style="text-align:center") 
+                    tbody
+                        tr      
+                            td(style="text-align:center")  1 Year
+                            td(style="text-align:center")  £100
+                            td(style="text-align:center") 
+                                form(action="/buyPass" method="post")
+                                    input#passType(type="hidden" name="passType" value="1 Year")
+                                    input#userId(type="hidden" name="userId" value=session.userId)
+                                    button(type="submit") buy
+                        tr      
+                            td(style="text-align:center")  6 months
+                            td(style="text-align:center")  £50
+                            td(style="text-align:center") 
+                                form(action="/buyPass" method="post")
+                                    input#passType(type="hidden" name="passType" value= "6 Months")
+                                    input#userId(type="hidden" name="userId" value=session.userId)
+                                    button(type="submit") buy
+                        tr      
+                            td(style="text-align:center")  3 months
+                            td(style="text-align:center")  £25
+                            td(style="text-align:center") 
+                                form(action="/buyPass" method="post")
+                                    input#passType(type="hidden" name="passType" value= "3 Months")
+                                    input#userId(type="hidden" name="userId" value=session.userId)
+                                    button(type="submit") buy

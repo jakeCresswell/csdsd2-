@@ -1,0 +1,11 @@
+nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
+  button.navbar-toggler.hidden-md-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#navbar') &#x2630;
+  #navbar.navbar-nav.collapse.navbar-toggleable-sm
+      a.navbar-brand(href='/')
+
+      if currentUser
+        div
+          img.avatar.img-circle.hidden-xs-down(src='/images/avatar.png', alt='avatar')
+          a.btn.btn-light.pull-md-right(href='/logout') Log out
+      else
+        a.btn.btn-info.pull-md-right(href='/login') Login

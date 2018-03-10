@@ -1,0 +1,17 @@
+extends layout
+
+block content
+ .main.container.text-xs-center
+  h1.display-3 Top Up
+  p Balance is £ #{user.Balance}
+    form(action='/confirm', method='post')
+        input#balance(type="hidden", name='balance', value=5.0)  
+        button(class="btn btn-danger", type='submit') £5
+    form(action='/confirm', method='post')
+        input#balance(type="hidden", name='balance', value=10.0)  
+        button(class="btn btn-danger", type='submit') £10
+    form(action='/confirm', method='post')
+        input#balance(type="hidden", name='balance', value=15.0)  
+        button(class="btn btn-danger", type='submit') £15
+
+

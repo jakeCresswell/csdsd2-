@@ -1,0 +1,51 @@
+{
+  "name": "new-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0-beta.2",
+    "brcypt": "^1.0.1",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "connect-mongo": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "git": "^0.1.5",
+    "jquery": "^3.2.1",
+    "jsgrid": "^1.5.3",
+    "jsonwebtoken": "^8.1.0",
+    "method-override": "^2.3.10",
+    "mocha": "^4.0.1",
+    "moment": "^2.21.0",
+    "mongo-edit": "^0.6.0",
+    "mongoclient": "^1.0.3",
+    "mongoose": "^4.13.11",
+    "mongoose-searchable": "^1.0.0",
+    "mongoose-text-search": "0.0.2",
+    "morgan": "^1.9.0",
+    "nedb": "^1.8.0",
+    "nib": "^1.1.2",
+    "pug": "^2.0.0-rc.4",
+    "sinon": "^4.2.2",
+    "sinon-chai": "^2.14.0",
+    "sinon-mongoose": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.3",
+    "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "author": "sodc",
+  "license": "ISC"
+}

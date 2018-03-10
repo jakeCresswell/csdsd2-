@@ -1,0 +1,18 @@
+extends layout
+
+block content
+ .main.container.clearfix
+        h3(style='text-align: center;') Live Departures
+                        div
+                                table(class="table bordered" style="text-align: center")
+                                        thread
+                                                tr
+                                                        th(style="text-align:center") Departing 
+                                                        th(style="text-align:center") Arriving 
+                                                        th(style="text-align:center") Fare
+                                        tbody
+                                                for journey in journeys
+                                                        tr      
+                                                                td(style="text-align:center")  #{journey.fromLocation} #{moment(journey.startDate).format('MMMM Do YYYY, h:mm:ss a')}
+                                                                td(style="text-align:center")  #{journey.fromLocation} #{moment(journey.toDate).format('MMMM Do YYYY, h:mm:ss a')}
+                                                                td(style="text-align:center")  #{journey.amountPaid}

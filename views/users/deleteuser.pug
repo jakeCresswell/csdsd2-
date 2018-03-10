@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  .main.container.clearfix
+    h1 Delete Account
+    //- We add _method=PUT to the URL instead of a hidden input.
+    form(method='POST' action='/users/deleteuser?_method=DELETE')
+     div.form-group
+     p We are sorry to hear that you want to close your account.
+     p Please confirm you want to remove your account
+       button.btn.btn-primary(data-id="#{user.id)") Delete Account

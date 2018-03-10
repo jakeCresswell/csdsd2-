@@ -1,0 +1,567 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+/* Base Styles */
+
+body {
+	background: #1d2a33;
+	background-size: cover;
+}
+
+a:hover {
+	color: rgba(49,176,213, .7);
+}
+
+/* Component Styles */
+
+.navbar {
+	padding: 1rem 0;
+	background: rgba(0,0,0, .25);
+}
+.lead {
+	margin-bottom: 2.5rem;
+}
+.main {
+	color: rgb(255, 255, 255);
+	min-height: calc(100vh - 34px);
+}
+.foot {
+	font-size: .85rem;
+	padding: .5rem 0;
+	color: rgba(255,255,255, .6);
+}
+
+/* Modifier Styles */
+
+.nav-items .nav-link {
+	margin: 0 1rem;
+}
+.navbar-brand {
+	margin: 0;
+}
+.navbar .nav-link,
+.navbar .btn {
+	text-transform: uppercase;
+	font-size: .95rem;
+}
+.list-group {
+	color: initial;
+}
+.label {
+	font-size: .88rem;
+	vertical-align: top;
+	margin: 3px 0 0 4px;
+}
+
+/* Button Styles */
+
+.btn-primary {
+	background: #417aba;
+	border-color: #417aba;
+}
+.btn-info {
+	background-color: #31b0d5;
+	border-color: #2aabd2;
+}
+.btn-info:hover {
+	background-color: #5bc0de;
+	border-color: #5bc0de;
+}
+.btn-light {
+	color: rgba(255,255,255, .75);
+	background: rgba(255,255,255, .12);
+}
+.btn-light:hover {
+	background: rgba(255,255,255, .2);
+}
+.active,
+.btn {
+	transition: .4s;
+}
+
+/* Icon Styles */
+
+.icn-logo {
+	margin: 3px 3px 0;
+	float: left;
+}
+.icn-person {
+	font-size: 50px;
+	border-radius: 50%;
+	border: solid 2px;
+	padding: .5rem;
+}
+.avatar {
+	width: 35px;
+	margin-right: 18px;
+	border: solid 2px rgba(255,255,255, .75);
+}
+.options {
+	display: none;
+}
+.list-group-item:hover .options {
+	display: block;
+}
+.options .material-icons {
+	font-size: 1.25rem;
+	cursor: pointer;
+	margin-left: 1rem;
+	color: rgba(0,0,0, .35);
+}
+.options .material-icons:hover {
+	color: initial;
+}
+
+.favorite-book {
+  margin-top: 30px;
+}
+
+/* Media Queries */
+
+@media (min-width: 0) and (max-width: 47em) {
+	.navbar {
+		background: #1d2a33;
+	}
+	.nav-items .nav-item {
+		float: none;
+	}
+	.nav-items .nav-link  {
+		padding: .65rem 0;
+		display: block;
+	}
+	.nav-items {
+		padding: 1rem 0;
+		clear: left;
+	}
+	.navbar .btn {
+		margin-left: 1rem;
+	}
+	.main {
+		padding-top: 6rem;
+		color: rgb(32, 185, 190);
+	}
+}
+
+@media (min-width: 48em) {
+	.navbar {
+		min-height: 70px;
+	}
+	.navbar-nav .container {
+		display: -webkit-flex;
+		display: flex;
+	}
+	.nav-items {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.main {
+		padding-top: 8rem;
+		color: rgb(92, 132, 165);
+	}
+}
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+    color: rgb(92, 132, 165);
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+	width: 100%;
+	color: rgb(92, 132, 165);
+
+}
+
+/* button styles*/
+.btn {
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 0.8em 1em;
+	position: relative;
+	width: 100%;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 400;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	overflow: hidden;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  }
+  .btn-link {
+	color: #428BCA;
+	text-align: right;
+	font-weight: 500;
+	width: 48%;
+	float: right;
+  }
+  .btn-link:hover {
+	color: #2F6FA8;
+  }
+  .btn-link:after {
+	display: none;
+  }
+  .btn-main {
+	background: #428BCA;
+  }
+  .btn-main:hover {
+	background: #2F6FA8;
+  }
+  .btn-secondary {
+	background: #FFC107;
+  }
+  .btn-secondary:hover {
+	background: #FFA000;
+  }
+  .btn-outlined-main, .btn-outlined-secondary {
+	border: 2px solid;
+  }
+  .btn-outlined-main:hover, .btn-outlined-secondary:hover {
+	background: rgba(255, 255, 255, 0.2);
+  }
+  .btn-outlined-main {
+	border-color: white;
+  }
+  .btn-outlined-secondary {
+	border-color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 0.8);
+  }
+  .btn-outlined-secondary:hover {
+	color: white;
+  }
+  .btn:after {
+	content: "\f105";
+	font-size: 18px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	position: relative;
+	right: 10%;
+	opacity: 0;
+	top: 0;
+	font-family: 'FontAwesome';
+	color: #fff;
+	margin-left: 5px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  }
+  .btn:hover:after {
+	right: 0%;
+	opacity: 1;
+  }
+
+  .disabled {
+	opacity: 0.5;
+	pointer-events: none;
+  }
+
+  svg.ink {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  svg.ink circle {
+	fill: rgba(255, 255, 255, 0.2);
+  }
+
+  /* BASIC STYLE, IGNORE IT------------------------------------------ */
+  * {
+	box-sizing: border-box;
+  }
+
+  .container {
+	font-family: 'Roboto';
+	width: 480px;
+	margin: 30px auto 0;
+	display: block;
+	background: #FFF;
+	padding: 10px 50px 50px;
+  }
+
+  .container section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+  }
+  .container section a {
+	margin: 2px;
+  }
+
+  .sample-bg, .sample-picture-bg, .sample-no-bg {
+	padding: 30px;
+	margin: 5px 0;
+  }
+  .sample-bg {
+	background: #428BCA;
+  }
+  .sample-picture-bg {
+	background: url(http://autogreenmag.com/wp-content/uploads/2009/10/traffic-time-lapse.jpg) bottom no-repeat;
+  }
+
+
+	/* Font Loading */
+@font-face {
+	font-family: 'Monaco';
+	src: url('https://sillzen.github.io/etc/Monaco.ttf');
+}
+
+#main {
+	max-width: 250px;
+}
+
+span {
+	display: inline-block;
+}
+
+/* Sections of Ticket */
+
+.ticket-main {
+	width: 360px;
+	height: 58px;
+	font-family: Monaco;
+}
+
+.ticket-top {
+	border-top-left-radius: 19px;
+	border-top-right-radius: 19px;
+	background-color: rgb(255,94,3);
+	height: 52px;
+}
+
+.ticket-middle {
+	position: relative;
+	background-color: rgb(255,255,244);
+/* Github stopped allowing hotlinking of images - 404s without being logged in */
+	background-image: url('https://sillzen.github.io/images/ticket-bg.png');
+	height: 138px;
+}
+
+.ticket-bottom {
+	border-bottom-left-radius: 19px;
+	border-bottom-right-radius: 19px;
+	background-color: rgb(255,94,3);
+	height: 58px;
+}
+
+/* Top Strip Positioning */
+
+/* stuff only goes here on advance tickets ("VALID ONLY WITH RESERVATION[S]") or on new style tickets ("Off-Peak Day Return") */
+
+/* Middle Area Positioning - 4 rows */
+
+.middle-row {
+	width: 93%;
+	/*width: 539px;*/
+	margin-left: 10.5px;
+}
+
+.ticket-label {
+	font-size: 10px;
+	text-transform: none;
+}
+
+.ticket-detail {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.ticket-detail-large {
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.ticket-detail-small {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.middle-1 {
+	display: inline-block;
+	padding-top: 3px; /* Initial padding from top */
+}
+
+.middle-1-1 {
+	display: inline-block;
+	padding-bottom: 12px;
+}
+
+.middle-class {
+	width: 44px;
+}
+
+.middle-type {
+	width: 107px;
+}
+
+.middle-adult {
+	width: 37px;
+}
+
+.middle-child {
+	width: 45px;
+}
+
+.middle-rtn {
+
+}
+
+.middle-2 {
+	display: inline-block;
+}
+
+.middle-2-2 {
+	display: inline-block;
+	padding-bottom: 11px; /* More padding between the two sets of rows */
+}
+
+.middle-railcard-spacer {
+	width: 80px;
+}
+
+.middle-startdate {
+	width: 80px;
+}
+
+.middle-number {
+	width: 57px;
+}
+
+.middle-longnumber {
+	text-align: right;
+	display: inline-block;
+	/* don't actually need to set a width here - need to right align this */
+}
+
+.middle-3 {
+	display: inline-block;
+}
+
+.middle-3-3 {
+	display: inline-block;
+	padding-bottom: 12px;
+}
+
+.middle-from {
+	width: 113px;
+}
+
+.middle-valid {
+	width: 118px;
+}
+
+.middle-price {
+	/* don't actually need to set a width here - need to right align this */
+}
+
+.middle-4 {
+	display: inline-block;
+}
+
+.middle-4-4 {
+	display: inline-block;
+	padding-bottom: 6px;
+}
+
+.middle-to {
+	width: 113px;
+}
+
+.middle-route {
+	width: 80px;
+}
+
+.middle-validity {
+	/* don't actually need to set a width here */
+}
+
+/* Bottom Strip Positioning */
+
+.ticket-printed {
+	text-align: right;
+	margin-right: 20.5px;
+	margin-top: -16px; /* because margin-bottom doesn't work for some reason */
+}
+
+/* Logo Stuff */
+
+.ticket-logo-container {
+	padding-top: 12px;
+}
+
+.ticket-logo-2-container {
+	padding-top: 6px;
+}
+
+.ticket-logo {
+	background-image: url('https://sillzen.github.io/images/ticket-logo-2-small-transparent.png');
+	height: 55px;
+	width: 55px;
+	margin-left: 4.7%;
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-8.col-md-offset-2
+        h1.display-4
+          img.avatar.img-circle.hidden-xs-down(src='/images/avatar.png', alt='avatar')
+          | #{firstName} #{lastName}
+        | #{email}
+        p Welcome #{firstName} to your account.
+        if session.admin == true
+          a.btn.btn-primary(href='/journeys') JOURNEYS
+        if session.admin  == false
+          a.btn.btn-primary(href='/myTrips') MY TRIPS
+          a.btn.btn-primary(href='/topUp') TOP UP
+          a.btn.btn-primary(href='/getcard') GET SMART CARD
+          a.btn.btn-primary(href='/getBio') GET BIOTICKET
+          a.btn.btn-primary(href='/buyPass') BUY A PASS
+          p ---------------------------------------------
+
+          a.btn.btn-primary(href='/users/edituser') Edit Profile
+          a.btn.btn-primary(href='/users/deleteuser') Delete Account

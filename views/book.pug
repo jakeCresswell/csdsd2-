@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .main.container.text-xs-center
+    h1.display-3 E-Ticket
+    #main
+      div
+        .ticket-main
+          .ticket-top
+          .ticket-middle #{journey.fromLocation} - #{journey.toLocation} 
+            p Departing: #{moment(journey.startDate).format('DD/MM/YYYY, h:mm:ss a')}
+            p Arriving: #{moment(journey.toDate).format('DD/MM/YYYY, h:mm:ss a')}
+            p £ #{journey.amountPaid}
+          .ticket-bottom
+              .ticket-logo-2-container 
+              .ticket-logo
+                .ticket-printed
+          span.ticket-label Printed 09:48 on 23-MCH-16
+          center
+            a.btn.btn-primary(href='/buyOption') Buy TICKET
+            if session.userId !== undefined
+              form(action="/buyTicket" method="post")
+                input#userId(type="hidden" name="userId" value= session.userId)
+                input#journeyId(type="hidden" name="journeyId" value=journey._id)
+                button(class="btn.btn-primary" type="submit") Buy With SmartCard
+            a.btn.btn-primary(href='/profile') RETURN HOME
